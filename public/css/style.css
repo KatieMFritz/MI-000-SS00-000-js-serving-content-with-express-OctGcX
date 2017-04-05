@@ -1,18 +1,34 @@
+/* https://coolors.co/dcdcdd-c5c3c6-46494c-4c5c68-1985a1 */
+
 body {
-  background-color: turquoise;
+  background-color: #1985a1;
   max-width: 1000px;
   margin: 0 auto;
-  color: #333;
+  color: #46494c;
   font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+a {
+  color: #1985a1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 header {
   text-align: center;
+  color: #dcdcdd;
 }
 
+/* Nav */
 nav {
-  background-color: white;
-  padding: 16px 32px;
+  background-color: #4c5c68;
+  padding: 16px;
+  margin-bottom: 32px;
+  text-align: center;
 }
 
 nav ul {
@@ -21,35 +37,64 @@ nav ul {
 
 nav ul li {
   display: inline;
-  padding-right: 32px;
+  margin: 16px 32px;
+  line-height: 2;
 }
 
 nav ul li a {
-  color: #555;
+  color: #dcdcdd;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 120%;
 }
 
 nav ul li a:hover {
-  color: #111;
+  color: #c5c3c6;
   text-decoration: underline;
 }
 
+/* Kitty Profile */
 figure {
+  margin: 0;
+  padding: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-end: 0;
+  -webkit-margin-start: 0;
+}
+
+.kitty-profile figure {
   float: left;
-  margin: 16px;
+  max-width: 50%;
+  margin-right: 5%;
 }
 
 img {
-  max-width: 200px;
+  max-width: 100%;
 }
 
+.kitty-profile .stats {
+  color: #dcdcdd;
+}
+
+/* Home */
 .flex-parent {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .flex-item {
-  flex: 0 1 auto;
-  margin: 16px;
+  flex: 0 1 300px;
+  margin: 8px;
+  border: 3px solid #4c5c68;
+  background-color: #c5c3c6;
+}
+
+.flex-item figure {
+  width: 100%;
+}
+
+.home .stats {
   padding: 16px;
-  border: 3px solid #eee;
 }

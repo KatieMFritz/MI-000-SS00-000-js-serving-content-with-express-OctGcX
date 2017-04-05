@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <% include ../partials/head %>
-<body>
+<body class="home">
   <% include ../partials/header %>
   <main class="flex-parent">
     <% Object.keys(kitties).forEach(function (id) { %>
       <article class="flex-item">
-        <figure><img src="/images/<%= kitties[id].slug %>.jpg" alt="<%= kitties[id].name %>"></figure>
-        <a href="<%= kitties[id].slug %>"><h2><%= kitties[id].name %></h2></a>
-        <p>Age: <%= kitties[id].age %></p>
+        <figure><a href="<%= kitties[id].slug %>"><img src="/images/<%= kitties[id].slug %>.jpg" alt="<%= kitties[id].name %>"></a></figure>
+        <section class="stats">
+          <a href="<%= kitties[id].slug %>"><h2><%= kitties[id].name %></h2></a>
+          <p>Age: <%= kitties[id].age %></p>
+        </section>
       </article>
     <% }) %>
   </main>
