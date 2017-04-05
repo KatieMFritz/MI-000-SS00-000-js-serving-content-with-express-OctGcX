@@ -2,6 +2,8 @@ body {
   background-color: turquoise;
   max-width: 1000px;
   margin: 0 auto;
+  color: #333;
+  font-family: Arial, sans-serif;
 }
 
 header {
@@ -10,9 +12,44 @@ header {
 
 nav {
   background-color: white;
+  padding: 16px 32px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  padding-right: 32px;
+}
+
+nav ul li a {
+  color: #555;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #111;
+  text-decoration: underline;
 }
 
 figure {
   float: left;
   margin: 16px;
+}
+
+img {
+  max-width: 200px;
+}
+
+.flex-parent {
+  display: flex;
+}
+
+.flex-item {
+  flex: 0 1 auto;
+  margin: 16px;
+  padding: 16px;
+  border: 3px solid #eee;
 }

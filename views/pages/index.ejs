@@ -3,11 +3,11 @@
 <% include ../partials/head %>
 <body>
   <% include ../partials/header %>
-  <% include ../partials/nav %>
-  <main>
+  <main class="flex-parent">
     <% Object.keys(kitties).forEach(function (id) { %>
-      <article>
-        <h2><%= kitties[id].name %></h2>
+      <article class="flex-item">
+        <figure><img src="/images/<%= kitties[id].slug %>.jpg" alt="<%= kitties[id].name %>"></figure>
+        <a href="<%= kitties[id].slug %>"><h2><%= kitties[id].name %></h2></a>
         <p>Age: <%= kitties[id].age %></p>
       </article>
     <% }) %>

@@ -21,6 +21,12 @@ createKitty({
   age: '2',
   lives_with: 'Beth and Max'
 })
+createKitty({
+  name: 'Cosette',
+  slug: 'cosette',
+  age: '16 (at death)',
+  lives_with: 'Johnson family (until 2014)'
+})
 
 app.set('view engine', 'ejs')
 
@@ -33,14 +39,23 @@ app.get('/', function (request, response) {
 })
 
 app.get('/macgyver', function (request, response) {
-  response.render('pages/macgyver', {
-    kitties: kitties
+  response.render('pages/kitty', {
+    kitties: kitties,
+    kitty: kitties[0]
   })
 })
 
 app.get('/luna', function (request, response) {
-  response.render('pages/luna', {
-    kitties: kitties
+  response.render('pages/kitty', {
+    kitties: kitties,
+    kitty: kitties[1]
+  })
+})
+
+app.get('/cosette', function (request, response) {
+  response.render('pages/kitty', {
+    kitties: kitties,
+    kitty: kitties[2]
   })
 })
 
