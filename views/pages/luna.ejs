@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/head %>
+<body>
+  <% include ../partials/header %>
+  <% include ../partials/nav %>
+
+  <article>
+    <figure>
+      <img src="/images/<%= kitties[1].slug %>.jpg" alt="<%= kitties[1].name %>">
+    </figure>
+    <h2><%= kitties[1].name %></h2>
+    <p><strong>Age:</strong> <%= kitties[1].age %></p>
+    <p><strong>Lives with:</strong> <%= kitties[1].lives_with %></p>
+  </article>
+
+</body>
+</html>

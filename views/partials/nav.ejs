@@ -1,0 +1,9 @@
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <% Object.keys(kitties).forEach(function (id) { %>
+        <li>
+          <a href="/<%= kitties[id].slug %>"><%= kitties[id].name %></a></li>
+      <% }) %>
+    </ul>
+  </nav>

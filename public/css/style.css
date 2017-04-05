@@ -1,0 +1,18 @@
+body {
+  background-color: turquoise;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  background-color: white;
+}
+
+figure {
+  float: left;
+  margin: 16px;
+}

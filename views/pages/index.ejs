@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/head %>
+<body>
+  <% include ../partials/header %>
+  <% include ../partials/nav %>
+  <main>
+    <% Object.keys(kitties).forEach(function (id) { %>
+      <article>
+        <h2><%= kitties[id].name %></h2>
+        <p>Age: <%= kitties[id].age %></p>
+      </article>
+    <% }) %>
+  </main>
+</body>
+</html>
